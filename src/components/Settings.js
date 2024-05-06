@@ -6,7 +6,7 @@ import { addApp, deleteApp, fetchAppAction } from './redux/action';
 import { useNavigate } from 'react-router-dom';
 function Settings() {
   const dispatch = useDispatch()
-  const navigate = useNavigate()
+ 
   const apps = useSelector((state) => state.app.app)
   const nav = useNavigate()
   const [formData, setFormData] = useState({
@@ -37,9 +37,9 @@ const handleChange = (e) => {
        alert("Please select an app to delete.");
        return;
      }
-     await dispatch(deleteApp(selectedApp._id));
+      dispatch(deleteApp(selectedApp._id));
      alert("App deleted successfully!");
-     navigate("/");
+     nav("/");
    } catch (error) {
      alert("Failed to delete app. Please try again later.");
      console.error(error);
