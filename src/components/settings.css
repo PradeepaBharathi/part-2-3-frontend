@@ -1,0 +1,27 @@
+
+
+.app-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15rem;
+    gap:1rem;
+    padding:30px
+}
+label{
+    font-size: 2rem;
+}
+
+.btn-list{
+    display: flex;
+    gap:0.5rem
+}
+
+.btn{
+    width: 70px;
+    height: 40px;
+    background-color: #305566;
+    color: white;
+    border-radius: 5px;
+}
