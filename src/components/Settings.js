@@ -39,7 +39,7 @@ const handleChange = (e) => {
      }
      await dispatch(deleteApp(selectedApp._id));
      alert("App deleted successfully!");
-     nav("/");
+     navigate("/");
    } catch (error) {
      alert("Failed to delete app. Please try again later.");
      console.error(error);
@@ -90,7 +90,7 @@ const handleChange = (e) => {
             onChange={handleChange}
           />
           <datalist id="app-names">
-            {/* Map over apps to generate options */}
+          
             {apps.map((val) => (
               <option key={val._id} value={val.name} />
             ))}
